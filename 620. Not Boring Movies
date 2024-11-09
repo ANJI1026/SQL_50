@@ -1,0 +1,8 @@
+Problem No.620 Not Boring Movies
+Problem Link- https://leetcode.com/problems/not-boring-movies?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+select * from cinema
+where id % 2 !=0
+and description != 'boring'
+order by rating desc
