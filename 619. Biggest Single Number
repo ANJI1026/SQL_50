@@ -1,0 +1,9 @@
+Problem No.619 Biggest Single Number
+Problem Link- https://leetcode.com/problems/biggest-single-number?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+select max(num) as num from
+(select num
+from Mynumbers
+group by num
+having count(num) =1) as new_table
