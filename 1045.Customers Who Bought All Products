@@ -1,0 +1,8 @@
+Problem No.1045 Customers Who Bought All Products
+Problem Link- https://leetcode.com/problems/customers-who-bought-all-products?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+select customer_id
+from customer
+group by customer_id
+having count(distinct product_key) = (select count(product_key) from product)
