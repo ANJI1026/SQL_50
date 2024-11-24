@@ -1,0 +1,13 @@
+Problem No.1789 Primary Department for Each Employee
+Problem Link- https://leetcode.com/problems/primary-department-for-each-employee?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+select employee_id , department_id
+from employee 
+where primary_flag='Y'
+group by employee_id
+UNION
+select employee_id , department_id
+from employee
+group by employee_id
+having count(employee_id) =1
