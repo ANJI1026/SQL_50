@@ -1,0 +1,8 @@
+Problem No.1667 Fix Names in a Table
+Problem Link- https://leetcode.com/problems/fix-names-in-a-table?envType=study-plan-v2&envId=top-sql-50
+
+# Write your MySQL query statement below
+select user_id,
+concat(upper(left(name,1)), lower(right(name, length(name)-1))) as name
+from users
+order by user_id
